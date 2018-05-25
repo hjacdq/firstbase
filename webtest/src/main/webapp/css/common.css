@@ -1,0 +1,40 @@
+.header{
+	width:100%;
+	min-width:980px;
+	background: #fff;
+}
+
+/*搜索框样式*/
+.searchDiv{
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+	width:335px;
+	vertical-align:middle;
+	background-color: #fff;
+}
+.searchinput{
+	display: inline-block;
+	height: 25px;
+	width:300px;
+	padding: 0px 5px;
+	border:none;
+	font-size:12px;
+}
+.searchgo{
+	margin:auto auto;
+	cursor:pointer;
+    border: none;
+    height: 25px;
+    text-indent: -99999em;
+    width: 25px;
+    display: inline-block;
+    background-color: #fff;
+}
+/* a标签样式 */
+a {font-size:16px;text-decoration:none;}   
+a:link {text-decoration:none;} /*未访问：蓝色、无下划线 */
+a:active:{text-decoration:none;} /*激活：红色   */
+a:visited {text-decoration:none;} /*已访问：紫色、无下划线   */
+a:hover {text-decoration:underline;cursor: pointer;} /*鼠标移近：红色、下划线   */
+

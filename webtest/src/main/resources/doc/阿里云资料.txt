@@ -1,0 +1,19 @@
+IP138.com查看外网ip
+本地在外网的ip:  221.224.214.98
+tmykw666.com/platformTest/main/index.do
+
+
+15261145513阿里云账号
+AccessKeyID=LTAIvSsCpi35hqfA
+AccessKeySecret=yXGciyqfFvdPijTHTuOnXEKQmCVxtb
+EndPoint：oss-cn-hangzhou.aliyuncs.com 
+OSS安全码: hj1309259017
+华东1
+tmykw
+
+实例ID： i-m5e6e9k61h84ewpig0r7
+名称： launch-advisor-2018022...
+公网IP： 118.190.149.135
+私有IP： 172.31.178.140
+实例密码:Hj5262366
+mysql数据库登录密码:Hj5262366

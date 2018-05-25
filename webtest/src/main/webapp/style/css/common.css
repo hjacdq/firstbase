@@ -1,0 +1,21 @@
+/* index */
+body{background: rgba(70,149,194,0.3);}
+a:hover{ text-decoration:none} 
+.header{width:100%;min-width:980px;background: #fff;}
+.main{ position:relative;width:980px;min-width:980px;margin:0 auto;}
+.fixedDiv{position: fixed;top: 0px;left: 0px;}
+.leftlay{width:100px;height:230px;border:1px solid #ccc;float:left;}
+.rightlay{width:850px;min-width:750px;height:800px;border:1px solid #ccc;float:right;}
+.leftlay li{height:40px;line-height:40px;position: relative;text-align:center;list-style: none;margin:5px 0;}
+.leftlay li:hover{background:#48D1CC;color:#fff;cursor: pointer;}
+.searchDiv{width:980px;min-width: 980px;margin:20px auto;border:1px solid #ccc;}
+.search-input{height:33px;width:330px;padding:0 5px;}
+.search-btn{background-color:#87CEFA;}
+.search-btn:hover{background-color:#6495ED;color:#fff;}
+.mainContent{width:100%;position: relative;}
+
+/* 下载首页*/
+.sec_box { margin: 0 auto;width:980px;min-width:980px;height:70px;border-radius: 10px;}
+.sec_box ul { position: relative; margin: 0 auto; width: 960px; }
+.sec_box li { float: left; margin-right: 0px; width: 100px; height: 70px; }
+.sec_box a { font-style: normal; position: relative; color:#000; text-align: center; line-height: 70px; text-decoration: none; display: block; z-index: 200 }

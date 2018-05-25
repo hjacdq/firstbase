@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hj.dao.UserDAO">
+	
+	<insert id="save" parameterType="User">
+		insert into user (openid,username,password,nickname,sex,province,city,country,headimgurl,privilege,
+		unionid,createTime,modifyTime)
+		values
+		(#{openid},#{username},#{password},#{nickname},#{sex},#{province},#{city},#{country},#{headimgurl},#{privilege},
+		#{unionid},now(),now())
+		<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+	</insert>
+	
+	<select id="getAll" resultType="User">
+		select * from user
+	</select>
+	
+	<!-- 根据openid查询 -->
+	<select id="getByOpenId" parameterType="string" resultType="User">
+		select * from user where openid = #{openid}
+	</select>
+	
+	<!-- 根据用户名查询 -->
+	<select id="getByUsername" parameterType="string" resultType="User">
+		select * from user where username = #{username}
+	</select>
+	
+	<update id="update" parameterType="User">
+		update user set 
+		openid=#{openid},nickname=#{nickname},username=#{username},password=#{password},
+		sex=#{sex},province=#{province},
+		city=#{city},country=#{country},headimgurl=#{headimgurl},
+		privilege=#{privilege},unionid=#{unionid},modifyTime=now() 
+		where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="string">
+	    delete from user where openid=#{openid}
+	</delete>
+	
+	<delete id="deleteByUsername" parameterType="string">
+	    delete from user where username=#{username}
+	</delete>
+</mapper>

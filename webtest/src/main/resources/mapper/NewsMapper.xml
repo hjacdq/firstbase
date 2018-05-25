@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hj.dao.NewsDAO">
+	
+	<insert id="save" keyProperty="id" useGeneratedKeys="true"  parameterType="com.hj.entity.News">
+		insert into `news` 
+		(`type`,`title`,`content`,`author`,`status`,`createTime`,`modifyTime`)
+		values
+		(#{type},#{title},#{content},#{author},#{status},#{createTime},#{modifyTime})
+	</insert>
+	
+    <select id="getById" parameterType="Long" resultType="News">
+	    select * FROM `news` where id=#{id}
+	</select>
+    
+	<select id="getByAuthor" parameterType="string" resultType="News">
+	    select * FROM `news` where author=#{author}
+	</select>
+	
+	<update id="update" parameterType="News">
+		update `news` set modifyTime=now() 
+		<if test="type != null and type != '' ">
+	    	AND `type` = #{type}
+		</if> 
+		<if test="title != null and title != '' ">
+	    	AND `title` = #{title}
+		</if> 
+		<if test="content != null and content != '' ">
+	    	AND content = #{content}
+		</if> 
+		<if test="author != null and author != '' ">
+	    	AND `author` = #{author}
+		</if> 
+		<if test="status != null and status != '' ">
+	    	AND `status` = #{status}
+		</if> 
+		where `id`=#{id}
+	</update>
+	
+</mapper>

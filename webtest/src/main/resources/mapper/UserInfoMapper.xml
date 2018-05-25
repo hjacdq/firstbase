@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hj.dao.UserInfoDAO">
+	
+	<insert id="save" parameterType="UserInfo">
+		insert into user_info 
+		(userId,birthYear,birthMonth,birthDay,country,province,city,createTime,modifyTime)
+		values
+		(#{userId},#{birthYear},#{birthMonth},#{birthDay},#{country},#{province},#{city},now(),now())
+		<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+	</insert>
+	
+	<select id="getByUserId" parameterType="Long" resultType="UserInfo">
+		select * from user_info where userId=#{userid}
+	</select>
+	
+	
+	<update id="update" parameterType="UserInfo">
+		update user_info set 
+		birthYear=#{birthYear},birthMonth=#{birthMonth},birthDay=#{birthDay},
+		country=#{country},province=#{province},city=#{city},
+		modifyTime=now() 
+		where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="Long">
+	    delete from user_info where id=#{id}
+	</delete>
+	
+	<delete id="deleteByUserId" parameterType="Long">
+	    delete from user_info where userId=#{userId}
+	</delete>
+	
+</mapper>

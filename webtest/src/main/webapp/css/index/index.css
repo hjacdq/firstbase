@@ -1,0 +1,54 @@
+body{
+	background: rgba(70,149,194,0.1);
+}
+.main{
+	position:relative;
+	width:980px;
+	min-width:980px;
+	margin:0 auto;
+}
+.fixedDiv{
+	position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.leftlay{
+	width:100px;
+	height:230px;
+	border:1px solid #ccc;
+	float:left; 
+}
+.rightlay{
+	width:850px;
+	min-width:750px;
+	height:auto;
+	border:1px solid #ccc;
+	
+	float:right;	
+	position: relative;
+	padding-top: 500px;
+}
+.leftlay li{
+	height:40px;
+	line-height:40px;
+	position: relative;
+	text-align:center;
+	list-style: none;
+	margin:5px 0;
+}
+.leftlay li:hover{
+	background:#48D1CC;
+	color:#fff;
+	cursor: pointer;
+}
+.mainContent{
+	width:100%;
+	position: relative;
+}
+.index_search_div{
+	width:980px;
+	min-width: 980px;
+	height:40px;
+	line-height:40px;
+	margin:20px auto;
+}
