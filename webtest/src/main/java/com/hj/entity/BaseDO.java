@@ -10,6 +10,8 @@ public class BaseDO {
 	
 	protected Date modifyTime;
 
+	protected Integer status;
+	
 	public Long getId() {
 		return id;
 	}
@@ -32,6 +34,14 @@ public class BaseDO {
 
 	public void setModifyTime(Date modifyTime) {
 		this.modifyTime = modifyTime;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 	
 }

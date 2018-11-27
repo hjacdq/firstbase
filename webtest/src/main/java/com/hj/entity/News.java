@@ -1,11 +1,11 @@
 package com.hj.entity;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class News {
+public class News extends BaseDO implements Serializable{
 	
-	private Long id;
-	
+	private static final long serialVersionUID = -8784301459227269974L;
+
 	private String type;
 	
 	private String title;
@@ -14,20 +14,6 @@ public class News {
 	
 	private String author;
 	
-	private Integer status;
-	
-	private Date createTime;
-	
-	private Date modifyTime;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getType() {
 		return type;
 	}
@@ -60,28 +46,4 @@ public class News {
 		this.author = author;
 	}
 
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getModifyTime() {
-		return modifyTime;
-	}
-
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
-	
 }

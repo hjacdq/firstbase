@@ -1,10 +1,9 @@
 package com.hj.util;
 
 import java.io.Writer;  
-import java.lang.reflect.Field;  
-  
+import java.lang.reflect.Field;
 
-import com.hj.entity.XStreamCDATA;
+import com.hj.model.XStreamCDATA;
 import com.thoughtworks.xstream.XStream;  
 import com.thoughtworks.xstream.annotations.XStreamAlias;  
 import com.thoughtworks.xstream.core.util.QuickWriter;  

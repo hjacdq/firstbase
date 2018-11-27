@@ -129,8 +129,7 @@ public class UserController extends WebBaseController{
 		password = MD5Util.string2MD5(password);
 		user.setPassword(password);
 		userService.addUser(user);
-		req.getSession().setAttribute("user", user);
-		req.getSession().setAttribute("USER_STATUS", "login");
+		setSession(req,user);
 		result.put("status", "success");
 		return result;
 	}
@@ -189,7 +188,6 @@ public class UserController extends WebBaseController{
 			return result;
 		}
 		setSession(req,user);
-		req.getSession().setAttribute("USER_STATUS", "login");
 		Cookie cookie = new Cookie("username",user.getUsername());  
         cookie.setMaxAge(1000*60*60*24*30*12);  
 		result.put("status", "success");

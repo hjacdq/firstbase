@@ -2,6 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hj.dao.MemberDAO">
 	
+	<insert id="save" keyProperty="id" useGeneratedKeys="true"  parameterType="com.hj.entity.Member">
+		insert into `member` 
+		(`name`,`username`,`password`,`sex`,`openId`,`nickName`,`picUrl`,
+		`phone`,`integral`,`status`,
+		`createTime`,`modifyTime`)
+		values
+		(#{name},#{username},#{password},#{sex},#{openI},#{nickName},#{picUrl},
+		#{phone},#{integral},#{status},
+		#{createTime},#{modifyTime})
+	</insert>
 	
     <select id="getByPhone" parameterType="string" resultType="Member">
 	    select * FROM member where phone=#{phone}

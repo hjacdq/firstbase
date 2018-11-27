@@ -182,7 +182,7 @@ $("#regist").click(function(){
 		type:'post',
 		data:{	"username":username_reg,
 				"password":password_reg,
-				"password":password2_reg
+				"password2":password2_reg
 				},
 		dataType:'json',
 		success:function(data){

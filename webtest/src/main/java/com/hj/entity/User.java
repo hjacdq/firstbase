@@ -1,12 +1,11 @@
 package com.hj.entity;
 
-import java.util.Date;
-import java.util.List;
+import java.io.Serializable;
 
-public class User {
+public class User extends BaseDO implements Serializable{
 
-	private Long id;
-	
+	private static final long serialVersionUID = -1301086892101400435L;
+
 	private String username;
 	
 	private String password;
@@ -31,18 +30,6 @@ public class User {
 	
 	private String unionid;//只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
 	
-	private Date createTime;
-	
-	private Date modifyTime;
-
-	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getOpenid() {
 		return openid;
@@ -116,22 +103,6 @@ public class User {
 
 	public void setUnionid(String unionid) {
 		this.unionid = unionid;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getModifyTime() {
-		return modifyTime;
-	}
-
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
 	}
 
 	public String getUsername() {

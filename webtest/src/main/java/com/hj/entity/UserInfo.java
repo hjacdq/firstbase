@@ -1,11 +1,11 @@
 package com.hj.entity;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class UserInfo {
+public class UserInfo extends BaseDO implements Serializable{
 
-	private Long id;
-	
+	private static final long serialVersionUID = 5087186587388092442L;
+
 	private Long userId;
 	
 	private String birthYear;
@@ -19,18 +19,6 @@ public class UserInfo {
 	private String province;
 	
 	private String city;
-	
-	private Date createTime;
-	
-	private Date modifyTime;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public Long getUserId() {
 		return userId;
@@ -88,20 +76,4 @@ public class UserInfo {
 		this.city = city;
 	}
 
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getModifyTime() {
-		return modifyTime;
-	}
-
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
-	
 }

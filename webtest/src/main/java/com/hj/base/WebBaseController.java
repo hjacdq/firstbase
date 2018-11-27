@@ -58,7 +58,9 @@ public class WebBaseController {
 		Long userId = user.getId();
 		String username = user.getUsername();
 		request.getSession().setAttribute("userId", userId);
+		request.getSession().setAttribute("user", user);
 		request.getSession().setAttribute("username", username);
+		request.getSession().setAttribute("USER_STATUS", "login");
 		
 	}
 	
