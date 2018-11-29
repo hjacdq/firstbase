@@ -26,35 +26,6 @@ body{
     top: 0px;
     left: 0px;
 }
-.leftlay{
-	width:100px;
-	height:230px;
-	border:1px solid #ccc;
-	float:left; 
-}
-.rightlay{
-	width:850px;
-	min-width:750px;
-	height:auto;
-	border:1px solid #ccc;
-	
-	float:right;	
-	position: relative;
-	padding-top: 500px;
-}
-.leftlay li{
-	height:40px;
-	line-height:40px;
-	position: relative;
-	text-align:center;
-	list-style: none;
-	margin:5px 0;
-}
-.leftlay li:hover{
-	background:#48D1CC;
-	color:#fff;
-	cursor: pointer;
-}
 .mainContent{
 	width:100%;
 	position: relative;
@@ -68,72 +39,6 @@ body{
 	position: relative;
 }
 
-
-.rightContentDiv{
-	height:400px;
-	width:270px;
-	display: inline-block;
-	background-color: #fff;
-	/* margin:10px 5px; */
-	position: absolute;
-	top:0px;
-}
-.img_common{
-	height:400px;
-	width:270px;
-}
-.img_hover{
-	position: relative;
-	width:300px;
-	height:450px;
-	left:-15px;
-}
-.hotContntDiv{
-	width:100%;
-	min-height:200px;
-}
-
-.left_news_show{
-	width:300px;
-	height:400px;
-	max-height:400px;
-	position: absolute;
-	top:0px;
-	left:0px;
-	background: url(<%=path %>/img/xiaoxiang_2.jpg);
-    /* opacity: 0.5; */
-}
-.right_news_show{
-	width:300px;
-	height:400px;
-	max-height:400px;
-	position: absolute;
-	top:0px;
-	right:0px;
-	background: url(<%=path %>/img/xiaoxiang_3.jpg);
-    /* opacity: 0.5; */
-}
-.news_div{
-	background-color:rgba(255,255,255,0.5);
-	width:300px;
-	height:auto;
-}
-.overflow{
-	z-index:10;
-	display:block;
-	max-width:250px;
-	width:250px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    height:33px;
-    line-height:33px;
-    padding-left:15px;
-    font-family: "Microsoft YaHei";
-    font-size:14px;
-    font-weight: 500;
-    /* background-color:rgba(255,255,255,0.5); */
-}
 .overflow:HOVER {
 	cursor: pointer;
 	color:blue;
@@ -158,6 +63,32 @@ body{
 .navList{
 	padding: 0px 3px;
 	margin-right:30px;
+}
+.index_leftContent{
+	display:inline-block;
+	width:335px;
+}
+.index_rightContent{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:600px;
+	margin-left:50px;
+	min-height:400px;
+	background-color: #fff;
+}
+.index_right_list{
+	display:inline-block;
+	width:80px;
+	text-align: center;
+	font-size:14px;
+	margin:10px;
+	font-family: sans-serif;
+	color:#a30;
+}
+.index_right_list:HOVER{
+	cursor: pointer;
+	font-weight: 600;
 }
 </style>
 <style>
@@ -191,18 +122,18 @@ body{
 		<img src="<%=path %>/img/search_32.png" class="searchgo"/>
 		<!-- <input type="submit" class="searchgo"/> -->
 		<div style="width:600px;position: absolute;right:0px;top:0px;height:40px;line-height:40px">
-			<label class="navList">
-				二次元
+			<label class="navList" onclick="showRightList(1);">
+				小说
 				<span class="tn-arrow"></span>
 			</label>
-			<label class="navList">
+			<!-- <label class="navList">
 				生活
 				<span class="tn-arrow"></span>
 			</label>
 			<label class="navList">
 				创意
 				<span class="tn-arrow"></span>
-			</label>
+			</label> -->
 		</div>
 	</div>
 </div>
@@ -211,7 +142,7 @@ body{
 <div class="main">
 	
 	<div class="mainContent">
-		<div style="display:inline-block;width:335px;">
+		<div class="index_leftContent">
 			<div id="carousel" class="carousel slide">
 			    <ol class="carousel-indicators">
 			        <li data-target="#carousel" data-ride="carousel" data-slide-to="0" class="active"></li>
@@ -261,38 +192,9 @@ body{
 			</div>
 		</div>
 		
-		<div style="position:absolute;top:0px;right:0px;width:600px;margin-left:50px;min-height:400px;background-color: #fff;">
-			<div style="position: relative;">
-				<div class="left_news_show">
-					<h3 style="text-align: center;">最热话题</h3>
-					<div class="news_div">
-						<span class="overflow" title="">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-					</div>
-				</div>
-				<div class="right_news_show">
-					<h3 style="text-align: center;">话题排行</h3>
-					<div class="news_div">
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-						<span class="overflow">测试测试测试测试测试测试测试测试测试测试测试测试</span>
-					</div>
-				</div>
+		<div class="index_rightContent">
+			<div class="index_right_list" onclick="javascript:window.open('<%=path %>/art/mgwords/toCheck.do')">
+				<span>敏感词过滤</span>
 			</div>
 		</div>
 		
@@ -300,7 +202,7 @@ body{
 	
 	<div style="width:100%;margin-top:30px;"></div>
 	
-	<button onclick="showMainContent();">发表内容</button>
+	<!-- <button onclick="showMainContent();">发表内容</button>
 	<div class="mainContent" id="editorDiv">
 		<div style="margin:5px 0;">
 			<span>标题</span>
@@ -313,7 +215,7 @@ body{
 		</div>
 	</div>
 	
-	<div style="width:100%;margin-top:30px;"></div>
+	<div style="width:100%;margin-top:30px;"></div> -->
 	
 </div>
 
@@ -426,14 +328,6 @@ $(function(){
 	$('#carousel').carousel({
 		 interval: 3000
 	})
-	$(".rightContentDiv img").mouseenter(function(){
-		$(this).removeClass("img_common");
-		$(this).addClass("img_hover");
-	})
-	$(".rightContentDiv img").mouseout(function(){
-		$(this).removeClass("img_hover");
-		$(this).addClass("img_common");
-	})
 	
 	var html = '<div class="pt hm">'
 	+'您需要登录后才可以回帖 <a href="member.php?mod=logging&amp;action=login" onclick="showWindow(\'login\', this.href)" class="xi2">登录</a> | <a href="member.php?mod=register-vipfenxiango0OlI1" class="xi2">立即注册</a>'
@@ -444,6 +338,12 @@ $(function(){
 //展示发布内容
 function showMainContent(){
 	$("#editorDiv").show();
+}
+//根据分类展示列表
+function showRightList(type){
+	if("1"==type){
+		console.log("sdas");
+	}
 }
 
 //提交发布内容

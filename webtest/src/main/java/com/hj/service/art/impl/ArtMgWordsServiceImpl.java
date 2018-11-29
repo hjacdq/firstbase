@@ -1,7 +1,10 @@
 package com.hj.service.art.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 import com.hj.dao.ArtMgWordsDAO;
 import com.hj.entity.ArtMgWords;
 import com.hj.model.ResultMap;
+import com.hj.service.Redis;
 import com.hj.service.art.ArtMgWordsService;
 import com.hj.util.SensitiveWordUtil;
 import com.hj.util.StringUtil;
@@ -56,20 +60,29 @@ public class ArtMgWordsServiceImpl implements ArtMgWordsService{
 	
 	@Override
 	public ResultMap check(String content) {
-//		Set<String> sensitiveWordSet = redisClientTemplate.get(key)
-			Set<String> sensitiveWordSet = 	new HashSet<>();
-        sensitiveWordSet.add("太多");
-        sensitiveWordSet.add("爱恋");
-        sensitiveWordSet.add("静静");
-        sensitiveWordSet.add("哈哈");
-        sensitiveWordSet.add("啦啦");
-        sensitiveWordSet.add("感动");
-        sensitiveWordSet.add("发呆");
+		//获取敏感词集合
+		Set<String> sensitiveWordSet = getSensitiveWordSet();
+		if(sensitiveWordSet==null || sensitiveWordSet.isEmpty())
+			return ResultMap.failure("功能尚未开放");
         //初始化敏感词库
         SensitiveWordUtil.init(sensitiveWordSet);
-		//初始化敏感词库
-        SensitiveWordUtil.init(sensitiveWordSet);
-		return null;
+        Set<String> set = SensitiveWordUtil.getSensitiveWord(content, SensitiveWordUtil.MinMatchTYpe);
+        List<String> list = new ArrayList<String>();
+    	list.addAll(set);
+        return ResultMap.success(list);
 	}
 
+	private Set<String> getSensitiveWordSet(){
+		Set<String> sensitiveWordSet = Redis.get("sensitiveWordSet");
+		if(sensitiveWordSet!=null){
+			return sensitiveWordSet;
+		}
+		sensitiveWordSet = 	new HashSet<>();
+		List<String> list = artMgWordsDAO.getSensitiveWordSet();
+		if(list==null || list.isEmpty())
+			return sensitiveWordSet;
+		sensitiveWordSet.addAll(list);
+		return sensitiveWordSet;
+	}
+	
 }

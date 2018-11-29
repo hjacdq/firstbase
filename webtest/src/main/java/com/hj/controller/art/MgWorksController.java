@@ -1,8 +1,5 @@
 package com.hj.controller.art;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -57,6 +54,19 @@ public class MgWorksController extends WebBaseController{
 		return artMgWordsService.doSave(keywordsStr);
 	}
 	
+
+	/**
+	 * @param req
+	 * @param res
+	 * @return
+	 * 跳转检测敏感词页面
+	 */
+	@RequestMapping("/toCheck")
+	public ModelAndView toCheck(HttpServletRequest req,HttpServletResponse res){
+		ModelAndView mav = new ModelAndView("art/checkPage");
+		return mav;
+	}
+	
 	/**
 	 * @param req
 	 * @param res
@@ -66,6 +76,10 @@ public class MgWorksController extends WebBaseController{
 	@ResponseBody
 	@RequestMapping("/check")
 	public ResultMap check(HttpServletRequest req,HttpServletResponse res){
+		StringBuffer url = req.getRequestURL();
+//		if(url.toString().indexOf("hjacdq.top")<0)
+//			return ResultMap.failure("请求异常");
+		
 		String content = (String)req.getParameter("content").trim();
 		if(StringUtil.isEmpty(content))
 			return ResultMap.failure("参数为空");

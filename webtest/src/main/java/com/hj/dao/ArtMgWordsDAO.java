@@ -17,4 +17,10 @@ public interface ArtMgWordsDAO {
 	
 	public void delete(Long id);
 	
+	/**
+	 * @return
+	 * 获取敏感子的集合
+	 */
+	public List<String> getSensitiveWordSet();
+	
 }

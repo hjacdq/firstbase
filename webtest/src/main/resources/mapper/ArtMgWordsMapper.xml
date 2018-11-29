@@ -19,6 +19,10 @@
 	<select id="getByKeywords" parameterType="String" resultType="ArtMgWords">
 	    select * FROM `art_mg_words` where keywords=#{keywords}
 	</select>
+	
+	<select id="getSensitiveWordSet" resultType="String">
+	    select keywords FROM `art_mg_words` where `status`=1
+	</select>
     
 	<update id="update" parameterType="ArtMgWords">
 		update `art_mg_words` set modifyTime=now() 

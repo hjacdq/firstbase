@@ -64,9 +64,6 @@ public class NewsController extends WebBaseController{
 	@RequestMapping("/getHotList")
 	public List<Map<String,Object>> getHotList(HttpServletRequest req,News news){
 		try{
-			StringBuffer url = req.getRequestURL();
-			String uri  = req.getRequestURI();
-			System.out.println("url="+url+" uri="+uri);
 			return newsService.getHotList();
 		}catch(Exception e){
 			logger.error("NewsController.getHotList error ",e);
