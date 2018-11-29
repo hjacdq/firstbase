@@ -6,7 +6,7 @@ import com.hj.entity.News;
 
 public interface NewsDAO {
 	
-	public Long save(News news);
+	public void save(News news);
 
 	public News getById(Long id);
 	

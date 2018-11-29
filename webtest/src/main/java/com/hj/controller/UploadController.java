@@ -176,7 +176,7 @@ public class UploadController {
                         //重命名上传后的文件名  
                     	String picUrl = imgUploadService.updateHead(file);
                     	if(StringUtil.isNotBlank(picUrl)){
-                    		picUrlList.add(picUrl);
+                    		picUrlList.add(picUrl.substring(0,picUrl.indexOf("?")));
                     	}
                     }  
                 }

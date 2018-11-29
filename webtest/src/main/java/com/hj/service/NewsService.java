@@ -1,16 +1,20 @@
 package com.hj.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.hj.entity.News;
+import com.hj.entity.User;
+import com.hj.model.ResultMap;
 
 public interface NewsService {
 	
-	public Long save(News news);
+	public ResultMap doSave(News news,User user);
 	
-	public News getById(Long id);
-
-	public List<News> getByAuthor(String authorName);
+	/**
+	 * @return
+	 * 获取热门话题
+	 */
+	List<Map<String,Object>> getHotList();
 	
-	public int update(News news);
 }

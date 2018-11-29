@@ -21,7 +21,6 @@ import com.hj.entity.User;
 import com.hj.entity.UserInfo;
 import com.hj.service.UserInfoService;
 import com.hj.service.UserService;
-import com.hj.service.impl.RedisClientTemplate;
 import com.hj.util.MD5Util;
 import com.hj.util.StringUtil;
 
@@ -36,9 +35,6 @@ public class UserController extends WebBaseController{
 	
 	@Autowired
 	private UserInfoService userInfoService;
-	
-	@Autowired
-	private RedisClientTemplate redisClientTemplate;
 	
 	/** 
 	* @Title: mine
@@ -126,6 +122,7 @@ public class UserController extends WebBaseController{
 		}
 		user = new User();
 		user.setUsername(username);
+		user.setCode("USR_"+System.currentTimeMillis());
 		password = MD5Util.string2MD5(password);
 		user.setPassword(password);
 		userService.addUser(user);

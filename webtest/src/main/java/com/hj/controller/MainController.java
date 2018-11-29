@@ -14,15 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hj.base.WebBaseController;
-import com.hj.service.impl.RedisClientTemplate;
+import com.hj.service.Redis;
 
 @RequestMapping("/main")
 @Controller
 public class MainController extends WebBaseController{
 	
-	
-	@Autowired
-	private RedisClientTemplate redisClientTemplate;
 	
 	/**
 	 * 跳转主页

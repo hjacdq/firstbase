@@ -31,7 +31,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.hj.base.WebBaseController;
-import com.hj.service.impl.RedisClientTemplate;
+import com.hj.service.Redis;
 import com.hj.util.HttpRequestUtil;
 import com.hj.util.SHA1;
 import com.hj.util.StringUtil;
@@ -62,13 +62,11 @@ public class QYController extends WebBaseController{
 	
 	private static String access_token = null;
 	
-	@Autowired
-	private RedisClientTemplate redisClientTemplate;
 	
 	//获取access_token
 	private String getAccess_Token(String corpid,String corpsecret){
 		String result = null;
-		String lastTimeStr = redisClientTemplate.get(corpid+"_"+corpsecret+"_time");
+		String lastTimeStr = Redis.get(corpid+"_"+corpsecret+"_time");
 		Long lastTime = 0l;
 		boolean flag = false;//是否需要重新拉取
 		if(lastTimeStr!=null){//缓存中有access_token
@@ -77,7 +75,7 @@ public class QYController extends WebBaseController{
 			}
 			Long nowTime = new Date().getTime()/1000;
 			if(nowTime-lastTime<7200){
-				result = redisClientTemplate.get(corpid+"_"+corpsecret+"_str");
+				result = Redis.get(corpid+"_"+corpsecret+"_str");
 			}else{//缓存数据超时，需要重新拉取
 				flag = true;
 			}
@@ -96,8 +94,8 @@ public class QYController extends WebBaseController{
 			Integer errcode = (Integer)jsonObject.getIntValue("errcode");
 			if(errcode!=null && errcode==0){
 				result = (String)jsonObject.get("access_token");
-				redisClientTemplate.set(corpid+"_"+corpsecret+"_time",(new Date().getTime()/1000)+"");
-				redisClientTemplate.set(corpid+"_"+corpsecret+"_str",result);
+				Redis.set(corpid+"_"+corpsecret+"_time",(new Date().getTime()/1000)+"");
+				Redis.set(corpid+"_"+corpsecret+"_str",result);
 			}else{
 				System.out.println("获取access_token失败");
 			}

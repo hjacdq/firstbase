@@ -10,7 +10,7 @@ public class User extends BaseDO implements Serializable{
 	
 	private String password;
 	
-	private String openid;//用户的唯一标识
+	private String code;//用户的唯一标识
 	
 	private String nickname;//用户昵称
 	
@@ -30,15 +30,6 @@ public class User extends BaseDO implements Serializable{
 	
 	private String unionid;//只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
 	
-
-	public String getOpenid() {
-		return openid;
-	}
-
-	public void setOpenid(String openid) {
-		this.openid = openid;
-	}
-
 	public String getNickname() {
 		return nickname;
 	}
@@ -87,8 +78,14 @@ public class User extends BaseDO implements Serializable{
 		this.headimgurl = headimgurl;
 	}
 
-	
-	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
 	public String getPrivilege() {
 		return privilege;
 	}
@@ -124,7 +121,7 @@ public class User extends BaseDO implements Serializable{
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password="
-				+ password + ", openid=" + openid + ", nickname=" + nickname
+				+ password + ", code=" + code + ", nickname=" + nickname
 				+ ", sex=" + sex + ", province=" + province + ", city=" + city
 				+ ", country=" + country + ", headimgurl=" + headimgurl
 				+ ", privilege=" + privilege + ", unionid=" + unionid

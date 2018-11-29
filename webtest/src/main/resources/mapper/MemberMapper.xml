@@ -11,6 +11,9 @@
 		(#{name},#{username},#{password},#{sex},#{openI},#{nickName},#{picUrl},
 		#{phone},#{integral},#{status},
 		#{createTime},#{modifyTime})
+		<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
 	</insert>
 	
     <select id="getByPhone" parameterType="string" resultType="Member">

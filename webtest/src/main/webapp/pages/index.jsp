@@ -300,13 +300,17 @@ body{
 	
 	<div style="width:100%;margin-top:30px;"></div>
 	
-	<div class="mainContent">
+	<button onclick="showMainContent();">发表内容</button>
+	<div class="mainContent" id="editorDiv">
+		<div style="margin:5px 0;">
+			<span>标题</span>
+			<input ="text" name="title" />
+		</div>
 		<div id="editor">
 		</div>
-		
-	</div>
-	<div>
-		<button onclick="subEditor();">提交</button>
+		<div>
+			<button onclick="subEditor();">提交</button>
+		</div>
 	</div>
 	
 	<div style="width:100%;margin-top:30px;"></div>
@@ -325,7 +329,7 @@ body{
 	//下面两个配置，使用其中一个即可显示“上传图片”的tab。但是两者不要同时使用！！！
 	//editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 	// 上传图片到服务器
-	editor.customConfig.uploadImgServer = '/upload/editorImgUpload.do'; 
+	editor.customConfig.uploadImgServer = '<%=path%>/upload/editorImgUpload.do'; 
 
 	// 隐藏“网络图片”tab
 	editor.customConfig.showLinkImg = false
@@ -430,10 +434,42 @@ $(function(){
 		$(this).removeClass("img_hover");
 		$(this).addClass("img_common");
 	})
+	
+	var html = '<div class="pt hm">'
+	+'您需要登录后才可以回帖 <a href="member.php?mod=logging&amp;action=login" onclick="showWindow(\'login\', this.href)" class="xi2">登录</a> | <a href="member.php?mod=register-vipfenxiango0OlI1" class="xi2">立即注册</a>'
+	+'<a href="https://bbs.vip866.com/connect.php?mod=login&amp;op=init&amp;referer=forum.php%3Fmod%3Dviewthread%26tid%3D58734%26extra%3Dpage%253D1%26page%3D1&amp;statfrom=login" target="_top" rel="nofollow"><img src="template/yeei_dream/yeei_cn//qq_login.gif" class="vm"></a>'
+	+'<a href="javascript:;" onclick="showWindow(\'wechat_bind1\', \'plugin.php?id=xigua_login:login\')"><img src="source/plugin/xigua_login/static/wechat_login1.png" align="absmiddle"></a> </div>';
+	editor.txt.html(html);
 })
+//展示发布内容
+function showMainContent(){
+	$("#editorDiv").show();
+}
+
+//提交发布内容
 function subEditor(){
 	var content = editor.txt.html();
-	
+	$.ajax({
+		url:"<%=path %>/art/newContent/saveContent.do",
+		type:"post",
+		data:{
+			"title":$("#title").val(),
+			"content":content
+			},
+		success:function(data){
+			var status = data.status;
+			var msg = data.msg;
+			if(data.success){
+				alert("保存成功");
+				window.location.reload()
+			}else{
+				alert(data.message);
+			}
+		},
+		error:function(){
+			alert('网络异常');
+		}
+	})
 }
 //$(".user_logdiv").slideToggle(300);
 </script>

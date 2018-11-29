@@ -7,6 +7,9 @@
 		(`type`,`title`,`content`,`author`,`status`,`createTime`,`modifyTime`)
 		values
 		(#{type},#{title},#{content},#{author},#{status},#{createTime},#{modifyTime})
+		<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
 	</insert>
 	
     <select id="getById" parameterType="Long" resultType="News">
@@ -15,6 +18,10 @@
     
 	<select id="getByAuthor" parameterType="string" resultType="News">
 	    select * FROM `news` where author=#{author}
+	</select>
+	
+	<select id="getHotList" parameterType="string" resultType="News">
+	    select * FROM `news` where `hot`=1 and `status`=1 limit 10
 	</select>
 	
 	<update id="update" parameterType="News">
