@@ -20,6 +20,10 @@ public class T {
 		Long timestamp = 1475224335l*1000;  
 		Date date = new Date(timestamp);
 		System.out.println(date);
+		for(int i=0;i<30;i++){
+			int num = (int)(Math.random()*41);
+			System.out.println(60+num);
+		}
 //		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //		System.out.println(sdf.format(date));
 //		System.out.println(date);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hj.dao.ArtMgWordsDAO">
+	
+	<insert id="save" keyProperty="id" useGeneratedKeys="true"  parameterType="com.hj.entity.ArtMgWords">
+		insert into `art_mg_words` 
+		(`keywords`,`index`,`status`,`createTime`,`modifyTime`)
+		values
+		(#{keywords},#{index},#{status},#{createTime},#{modifyTime})
+		<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+	</insert>
+	
+    <select id="getById" parameterType="Long" resultType="ArtMgWords">
+	    select * FROM `art_mg_words` where id=#{id}
+	</select>
+	
+	<select id="getByKeywords" parameterType="String" resultType="ArtMgWords">
+	    select * FROM `art_mg_words` where keywords=#{keywords}
+	</select>
+    
+	<update id="update" parameterType="ArtMgWords">
+		update `art_mg_words` set modifyTime=now() 
+		<if test="type != null and type != '' ">
+	    	AND `keywords` = #{keywords}
+		</if> 
+		<if test="title != null and title != '' ">
+	    	AND `index` = #{index}
+		</if> 
+		<if test="status != null and status != '' ">
+	    	AND `status` = #{status}
+		</if> 
+		where `id`=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="Long" >
+		delete from art_mg_words where id=#{id}
+	</delete>
+</mapper>
