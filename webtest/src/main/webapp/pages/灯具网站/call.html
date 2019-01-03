@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>联系我们</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<style type="text/css">
+.clear{
+	height:150px;
+	width:100%;
+	float:left;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+A IMG {
+    padding-bottom: 0px;
+    border-right-width: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    vertical-align: middle;
+    border-left-width: 0px;
+    padding-top: 0px;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+/*导航栏*/
+#box_top {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    float: none;
+}
+#box_top_sub{
+	margin: 0px auto;
+    width: 1200px;
+    float: none;
+}
+#box_top_sub_1{
+	width: 400px;
+    float: left;
+}
+#box_top_sub_2{
+	border-bottom: #bababa 1px solid;
+    width: 750px;
+    float: left;
+    margin-left: 34px;
+    padding-top: 40px;
+}
+#box_top_sub_2 ul{
+	padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    font: bold 12px Verdana;
+    overflow: hidden;
+    padding-top: 0px;
+    float:left;
+}
+#box_top_sub_2 li{
+	position: relative;
+    padding-left: 2px;
+    white-space: nowrap;
+    float: left;
+}
+#box_top_sub_2 a{
+	padding-bottom: 0px;
+    line-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 微软雅黑;
+    float: left;
+    height: 35px;
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 0px;
+}
+#box_top_sub_2 li:hover{
+	color:#fff;
+	background-color:#80C9FF;
+}
+
+/*banner轮播图*/
+#box_bn{
+	position: relative;
+    width: 100%;
+    float: none;
+    top: 122px;
+}
+
+/*底部*/
+#box_bottom{
+	padding-bottom: 40px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    background: #2c2c2c;
+    float: left;
+    padding-top: 40px;
+}
+#box_bottom_sub{
+    margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+#box_bottom_sub_1{
+	width: 50%;
+    float: left;
+}
+.bottom_list_div{
+	width:48%;
+	display:inline-block;
+	text-align:left;
+	color:#fff;
+	font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<!-- 头部 -->
+<div id="box_top">
+	<div id="box_top_sub">
+		<!-- logo -->
+		<div id="box_top_sub_1">
+			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+		</div>
+		<!-- 导航 -->
+		<div id="box_top_sub_2">
+			<ul>
+				<li><a href="index.html" id="index">首页</a></li>
+				<li><a href="product.html" id="product">产品</a></li>
+				<li><a href="about.html" id="about">企业介绍</a></li>
+				<li><a href="telent.html" id="telent">人才招聘</a></li>
+				<li><a href="customer.html" id="customer">客户案例</a></li>
+				<li><a href="call.html" style="color:#DF350B"  id="call">联系我们</a></li>
+			</ul>
+		</div>
+		<div id="box_top_sub_3"></div>
+	</div>
+</div>
+
+<!-- 轮播图banner -->
+<div id="box_bn">
+	<div id="carousel" class="carousel slide">
+	    <ol class="carousel-indicators">
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="1"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="2"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	        	<a>
+		            <img src="image/主图1.jpg" alt="First slide" 
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图2.jpg" alt="Second slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图3.jpg" alt="Third slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>新时代</h3>
+	            	<p>Enjoy Light Enjoy Life</p>
+	            </div>
+	        </div>
+	    </div>
+		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+	                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                 <span class="sr-only">Previous</span>
+	             </a>
+	             <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+	                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                 <span class="sr-only">Next</span>
+	             </a>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+
+<div id="box_bottom">
+	<div id="box_bottom_sub">
+		<div id="box_bottom_sub_1">
+			<div style="width:100%;">
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">传真：0577-88005868</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">邮箱：325088</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">http://www.zhenghui.com</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="box_bottom_sub_1">
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">郭星宇</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('#carousel').carousel({
+		 interval: 3000
+	})
+	
+	$("#box_top_sub_2 a").hover(function(){
+	    $(this).css("color","#fff");
+	},function(){
+		var id = $(this).attr("id");
+		if(id=='call'){
+			$(this).css("color","#DF350B");
+		}else{
+	   	 	$(this).css("color","#000");
+		}
+	});
+	
+	$("#customer_menu_div p").hover(function(){
+	    $(this).find("span").css("color","#80C9FF");
+	},function(){
+	    $(this).find("span").css("color","#000");
+	});
+	
+})
+</script>
+</html>

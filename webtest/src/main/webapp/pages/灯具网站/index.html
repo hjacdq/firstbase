@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<style type="text/css">
+.clear{
+	height:150px;
+	width:100%;
+	float:left;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+A IMG {
+    padding-bottom: 0px;
+    border-right-width: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    vertical-align: middle;
+    border-left-width: 0px;
+    padding-top: 0px;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+/*导航栏*/
+#box_top {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    float: none;
+}
+#box_top_sub{
+	margin: 0px auto;
+    width: 1200px;
+    float: none;
+}
+#box_top_sub_1{
+	width: 400px;
+    float: left;
+}
+#box_top_sub_2{
+	border-bottom: #bababa 1px solid;
+    width: 750px;
+    float: left;
+    margin-left: 34px;
+    padding-top: 40px;
+}
+#box_top_sub_2 ul{
+	padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    font: bold 12px Verdana;
+    overflow: hidden;
+    padding-top: 0px;
+    float:left;
+}
+#box_top_sub_2 li{
+	position: relative;
+    padding-left: 2px;
+    white-space: nowrap;
+    float: left;
+}
+#box_top_sub_2 a{
+	padding-bottom: 0px;
+    line-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 微软雅黑;
+    float: left;
+    height: 35px;
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 0px;
+}
+#box_top_sub_2 li:hover{
+	color:#fff;
+	background-color:#80C9FF;
+}
+
+/*banner轮播图*/
+#box_bn{
+	position: relative;
+    width: 100%;
+    float: none;
+    top: 122px;
+}
+
+
+/*内容*/
+#box_main_title{
+	text-align: center;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width: 660px;
+    float: none;
+    padding-top: 100px;
+}
+#box_main_sub{
+	margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+.box_main_sub_list{
+	height:400px;
+}
+.box_main_sub_list img{
+	width:500px;
+	height:340px;
+}
+.box_main_sub_menu{
+	width:100%;
+	height:128px;
+}
+.width_38{
+	width:38%;
+}
+.width_48{
+	width:48%;
+}
+.width_58{
+	width:58%;
+}
+#customer_menu_div{
+	width:100%;
+}
+#customer_menu_div p{
+	margin:0px 0px 20px 0px;
+}
+#customer_menu_div p:hover{
+	cursor: pointer;
+}
+/*底部*/
+#box_bottom{
+	padding-bottom: 40px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    background: #2c2c2c;
+    float: left;
+    padding-top: 40px;
+}
+#box_bottom_sub{
+    margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+#box_bottom_sub_1{
+	width: 50%;
+    float: left;
+}
+.bottom_list_div{
+	width:48%;
+	display:inline-block;
+	text-align:left;
+	color:#fff;
+	font-size:14px;
+}
+</style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="box_top">
+	<div id="box_top_sub">
+		<!-- logo -->
+		<div id="box_top_sub_1">
+			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+		</div>
+		<!-- 导航 -->
+		<div id="box_top_sub_2">
+			<ul>
+				<li><a href="index.html" style="color:#DF350B" id="index">首页</a></li>
+				<li><a href="product.html" id="product">产品</a></li>
+				<li><a href="about.html" id="about">企业介绍</a></li>
+				<li><a href="telent.html" id="telent">人才招聘</a></li>
+				<li><a href="customer.html" id="customer">客户案例</a></li>
+				<li><a href="call.html" id="call">联系我们</a></li>
+			</ul>
+		</div>
+		<div id="box_top_sub_3"></div>
+	</div>
+</div>
+
+<!-- 轮播图banner -->
+<div id="box_bn">
+	<div id="carousel" class="carousel slide">
+	    <ol class="carousel-indicators">
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="1"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="2"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	        	<a>
+		            <img src="image/主图1.jpg" alt="First slide" 
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图2.jpg" alt="Second slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图3.jpg" alt="Third slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>新时代</h3>
+	            	<p>Enjoy Light Enjoy Life</p>
+	            </div>
+	        </div>
+	    </div>
+		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+	                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                 <span class="sr-only">Previous</span>
+	             </a>
+	             <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+	                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                 <span class="sr-only">Next</span>
+	             </a>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<!-- 內容1 关于我们 -->
+<div id="box_main3">
+	<div id="box_main_title">
+		<div style="text-align:center">
+			<span style="color:#000;font-size:30px;">关&nbsp;&nbsp;于</span>
+			<span style="color:#337ab7;font-size:30px;">&nbsp;&nbsp;我&nbsp;&nbsp;们</span>
+		</div>
+		<div style="text-align:center">
+			<span style="color:#000;font-size:16px;">ABOUT&nbsp;&nbsp;US</span>
+		</div>
+	</div>
+	
+	<!-- 左侧图 -->
+	<div id="box_main_sub">
+		
+		<div class="box_main_sub_list float_left width_48">
+			<div style="width:100%;">
+				<p><span style="font-size:16px;color:#000;">华能灯具有限公司创建于1993年，注册资金11111万元，员工600多人，是一家自</span></p>
+				<p><span style="font-size:16px;color:#000;">主创新的高新技术企业，是温州市照明行业的龙头企业.，自行研发、生产、销</span></p>
+				<p><span style="font-size:16px;color:#000;">售、服务于一体的专业照明行业的领导者。</span></p>
+				<br>
+				<br>
+				<p><span style="font-size:16px;color:#000;">公司主要生产移动防爆照明、移动专业照明和固定防爆照明、固定专业照明、商</span></p>
+				<p><span style="font-size:16px;color:#000;">业照明五大系列为主的数百种照明产品，主要适用于电力、铁路、地铁、公安、</span></p>
+				<p><span style="font-size:16px;color:#000;">消防、部队、石油石化、冶金、煤矿、船舶、航空、场馆、水利防汛、事故抢险</span></p>
+				<p><span style="font-size:16px;color:#000;">等行业已作为工作照明和应急照明普遍使用，以专业、优质的产品，细致的服</span></p>
+				<p><span style="font-size:16px;color:#000;">务，得到了广大客户的认同和赞赏......</span></p>
+				
+				<p><a href="about.html">更多>></a></p>
+			</div>
+		</div>
+		<div class="box_main_sub_list float_right width_48">
+			<img src="image/关于我们.jpeg"  />
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<!-- 间隔图1 -->
+<div style="width:100%;">
+	<img src="image/间隔图1.jpg" style="width:100%;height:300px;"/>
+</div>
+
+<!-- 內容2  人才招聘 -->
+<div id="box_main3">
+	<div id="box_main_title">
+		<div style="text-align:center">
+			<span style="color:#000;font-size:30px;">人&nbsp;&nbsp;才</span>
+			<span style="color:#F29E20;font-size:30px;">&nbsp;&nbsp;招&nbsp;&nbsp;聘</span>
+		</div>
+		<div style="text-align:center">
+			<span style="color:#000;font-size:16px;">TALENT&nbsp;&nbsp;RECRUITMENT</span>
+		</div>
+	</div>
+	
+	<!-- 左侧图 -->
+	<div id="box_main_sub">
+		<div class="box_main_sub_list float_left width_48">
+			<img src="image/人才招聘.jpg"  />
+		</div>
+		<div class="box_main_sub_list float_right width_48">
+			<div class="box_main_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">生产员工</span></p>
+				<p><span>针对工作经验不限的一线操作工</span><a style="color:#F29E20;position:absolute;" href="telent.html">更多>> </a>	</p>
+			</div>
+			<div class="box_main_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">有工作经验者</span></p>
+				<p><span>我们依靠经验，为有工作经验的雇员提供新的挑战，或提供重新。。。</span><a style="color:#F29E20;" href="telent.html">更多>> </a></p>
+			</div>
+			<div class="box_main_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">职校生/大学生</span></p>
+				<p><span>职校生和大学生们随时能在公司找到有吸引力人的步入职场的机会——通过不同领域的实习，或者通过类似实习的方式在我们...</span><a style="color:#F29E20;" href="telent.html">更多>> </a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<!-- 间隔图2 -->
+<div style="width:100%;">
+	<img src="image/间隔图2.jpg" style="width:100%;height:300px;"/>
+</div>
+
+<!-- 內容3 客户案例-->
+<div id="box_main3">
+	<!-- 标题 -->
+	<div id="box_main_title">
+		<div style="text-align:center">
+			<span style="color:#000;font-size:30px;">客&nbsp;&nbsp;户</span>
+			<span style="color:#32CD32;font-size:30px;">&nbsp;&nbsp;案&nbsp;&nbsp;例</span>
+		</div>
+		<div style="text-align:center">
+			<span style="color:#000;font-size:16px;">CUSTOMER&nbsp;&nbsp;CASE</span>
+		</div>
+	</div>
+	
+	
+	<div id="box_main_sub">
+		<!-- 左侧 -->
+		<div class="box_main_sub_list float_left width_38">
+			<div id="customer_menu_div">
+				<p><span style="font-size:20px;color:#000;font-weight:600;">客户项目名称：</span></p>
+				<p><span style="font-size:16px;color:#000;">1、上海大众汽车二厂总装车间工位改造项目</span></p>
+				<p><span style="font-size:16px;color:#000;">2、上海大众汽车二厂涂装车间工位改造项目</span></p>
+				<p><span style="font-size:16px;color:#000;">3、上海大众汽车三厂总装车间工位照明</span></p>
+				<p><span style="font-size:16px;color:#000;">4、上海大众汽车三厂新涂装车间工位照明</span></p>
+				<p><span style="font-size:16px;color:#000;">5、上海大众汽车南京四厂总装车间厂房照明</span></p>
+				<p><span style="font-size:16px;color:#000;">6、上海大众汽车南京四厂总装车间工位照明</span></p>
+				<p><span style="font-size:16px;color:#000;">7、上海大众汽车南京四厂涂装车间工位照明</span></p>
+				<p><span style="font-size:16px;color:#000;">8、上海大众汽车南京四厂焊装车间工位照明</span></p>
+				
+				<p><a href="customer.html">更多>></a></p>
+			</div>
+		</div>
+		<!-- 右侧 -->
+		<div class="box_main_sub_list float_right width_58">
+			<img src="image/客户案例.jpg" style="width:680px;height:380px;"  />
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div id="box_bottom">
+	<div id="box_bottom_sub">
+		<div id="box_bottom_sub_1">
+			<div style="width:100%;">
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">传真：0577-88005868</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">邮箱：325088</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">http://www.zhenghui.com</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="box_bottom_sub_1">
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">郭星宇</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('#carousel').carousel({
+		 interval: 3000
+	})
+	
+	//导航菜单悬停颜色
+	$("#box_top_sub_2 a").hover(function(){
+	    $(this).css("color","#fff");
+	},function(){
+		var id = $(this).attr("id");
+		if(id=='index'){
+			$(this).css("color","#DF350B");
+		}else{
+	   	 	$(this).css("color","#000");
+		}
+	});
+	
+	//客户案例悬停颜色
+	$("#customer_menu_div p").hover(function(){
+	    $(this).find("span").css("color","#80C9FF");
+	},function(){
+	    $(this).find("span").css("color","#000");
+	});
+	
+})
+</script>
+</html>

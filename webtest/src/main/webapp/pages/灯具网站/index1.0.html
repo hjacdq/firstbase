@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首頁</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<!-- <link rel="stylesheet" href="css/style.css" type="text/css" /> -->
+<link rel="stylesheet" href="css/buttons.css" type="text/css" />
+<style type="text/css">
+.clear{
+	height:150px;
+	width:100%;
+	float:left;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+A IMG {
+    padding-bottom: 0px;
+    border-right-width: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    vertical-align: middle;
+    border-left-width: 0px;
+    padding-top: 0px;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+/*导航栏*/
+#box_top {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    float: none;
+}
+#box_top_sub{
+	margin: 0px auto;
+    width: 1200px;
+    float: none;
+}
+#box_top_sub_1{
+	width: 400px;
+    float: left;
+}
+#box_top_sub_2{
+	border-bottom: #bababa 1px solid;
+    width: 750px;
+    float: left;
+    margin-left: 34px;
+    padding-top: 40px;
+}
+#box_top_sub_2 ul{
+	padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    font: bold 12px Verdana;
+    overflow: hidden;
+    padding-top: 0px;
+    float:left;
+}
+#box_top_sub_2 li{
+	position: relative;
+    padding-left: 2px;
+    white-space: nowrap;
+    float: left;
+}
+#box_top_sub_2 a{
+	padding-bottom: 0px;
+    line-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 微软雅黑;
+    float: left;
+    height: 35px;
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 0px;
+}
+#box_top_sub_2 li:hover{
+	color:#fff;
+	background-color:#80C9FF;
+}
+
+/*banner轮播图*/
+#box_bn{
+	position: relative;
+    width: 100%;
+    float: none;
+    top: 122px;
+}
+
+/* 内容1 */
+#box_main1{
+    padding-bottom: 90px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    float: left;
+    padding-top: 90px;
+}
+#box_main1_sub{
+    margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+#box_main1_sub_1{
+    width: 477px;
+    float: left;
+}
+#box_main1_sub_1_title{
+	line-height: 70px;
+    width: 100%;
+    height: 70px;
+    color: #2c2c2c;
+    font-size: 36px;
+}
+#box_main1_sub_1_content{
+	width: 100%;
+    padding-top: 20px;
+}
+#box_main1_sub_2{
+	width: 634px;
+    float: right;
+}
+.box_menu_div{
+	text-align: left;
+    margin: 30px auto 0px;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+.box_menu_div ul{
+    width: 100%;
+    overflow: hidden;
+}
+.box_menu_div ul>li{
+	/* margin-bottom: 20px; */
+    float: none;
+    height: 110px;
+    overflow: hidden;
+}
+.pic{
+    width: 153px;
+    float: left;
+}
+.pic img{
+    width: 153px;
+    height: 110px;
+}
+.main{
+    padding-left: 20px;
+    display: table;
+}
+.newstitle{
+    position: relative;
+    width: 100%;
+    color: #fff;
+}
+.newslist{
+    width: 100%;
+   /*  padding-top: 20px; */
+    word-wrap: break-word;
+    float: none;
+    color: #545454;
+}
+.newstitle .title{
+	position: relative;
+    line-height: 26px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    padding-top: 0px;
+}
+.newstitle li h3{
+    padding-left: 0px;
+    display: inline;
+    background: none transparent scroll repeat 0% 0%;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+.newstitle .date{
+	position: absolute;
+    width: 100%;
+    color: #9d9d9e;
+    top: 20px;
+    line-height: 20px;
+}
+.summary{
+
+}
+
+/*内容2*/
+#box_main2_title{
+    text-align: center;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width: 660px;
+    float: none;
+    padding-top: 100px;
+}
+#box_main2_sub{
+	margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+.box_main2_sub_list{
+	width:560px;
+	height:400px;
+	float:left;
+}
+.box_main2_sub_list img{
+	width:220px;
+	height:220px;
+}
+#box_main2_sub_list_1{
+	/* display:inline-block; */
+	width:40%;
+}
+#box_main2_sub_list_2{
+	/* display:inline-block; */
+	width:55%;
+	padding-left:10px;
+}
+
+/*内容3 人才招聘*/
+#box_main3_title{
+	text-align: center;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width: 660px;
+    float: none;
+    padding-top: 100px;
+}
+#box_main3_sub{
+	margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+.box_main3_sub_list{
+	width:48%;
+	height:400px;
+}
+.box_main3_sub_list img{
+	width:500px;
+	height:400px;
+}
+.box_main3_sub_menu{
+	width:100%;
+	height:128px;
+}
+
+/*底部*/
+#box_bottom{
+	padding-bottom: 40px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    background: #2c2c2c;
+    float: left;
+    padding-top: 40px;
+}
+#box_bottom_sub{
+    margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+#box_bottom_sub_1{
+	width: 50%;
+    float: left;
+}
+</style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="box_top">
+	<div id="box_top_sub">
+		<!-- logo -->
+		<div id="box_top_sub_1">
+			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+		</div>
+		<!-- 导航 -->
+		<div id="box_top_sub_2">
+			<ul>
+				<li><a href="brand.html">首页</a></li>
+				<li><a href="product.html">产品</a></li>
+				<li><a href="news.html">解决方案</a></li>
+				<li><a href="solution.html">服务与培训</a></li>
+				<li><a href="support.html">合作伙伴</a></li>
+				<li><a href="about.html">关于我们</a></li>
+			</ul>
+		</div>
+		<div id="box_top_sub_3"></div>
+	</div>
+</div>
+
+<!-- 轮播图banner -->
+<div id="box_bn">
+	<div id="carousel" class="carousel slide">
+	    <ol class="carousel-indicators">
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="1"></li>
+	        <li data-target="#carousel" data-ride="carousel" data-slide-to="2"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	        	<a>
+		            <img src="image/主图1.jpg" alt="First slide" 
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图2.jpg" alt="Second slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>专业解决方案</h3>
+	            	<p>LIGHTING SOLUTION EXPERT</p>
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<a>
+		            <img src="image/主图3.jpg" alt="Third slide"
+		            style="width:100%;height:500px"/>
+	            </a>
+	            <div class="carousel-caption">
+	            	<h3>新时代</h3>
+	            	<p>Enjoy Light Enjoy Life</p>
+	            </div>
+	        </div>
+	    </div>
+		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+	                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                 <span class="sr-only">Previous</span>
+	             </a>
+	             <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+	                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                 <span class="sr-only">Next</span>
+	             </a>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<!-- 內容1 客户案例 -->
+<div id="box_main1">
+	<div id="box_main1_sub">
+		<!-- 左侧内容 -->
+		<div id="box_main1_sub_1">
+			<div id="box_main1_sub_1_title">客户案例</div>
+			<div id="box_main1_sub_1_content">
+				<div style="width:100%;">
+					<p><img alt="" src="image/pic1.jpg" style="width: 477px; height: 326px;"></p>
+					<p>上海大众汽车二厂总装车间工位改造项目</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 右侧内容 -->
+		<div id="box_main1_sub_2">
+			<div class="box_menu_div">
+				<div>
+					<ul>
+						<li>
+							<div class="pic">
+								<a href="#">
+									<img src="image/pic2.jpg" />
+								</a>
+							</div>
+							<div class="main">
+								<div class="newstitle">
+									<ul>
+										<li class="title">
+											<h3><a href="#">上海大众汽车南京四厂总装车间厂房照明</a></h3>
+										</li>
+										<li class="date">
+											<span></span>
+											2018-06-01
+										</li>
+									</ul>
+								</div>
+								<div class="newslist">
+									<ul>
+										<li class="summary">
+											<h3></h3>
+											<p>由香港贸易发展局 （香港贸发局）主办的香港国际秋季灯饰展 （秋灯展）一直是传统照明与照明科技产业瞩目的盛事。展览踏入第18届，一连四天（10月27至30日）于香港......</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<div class="pic">
+								<a href="#">
+									<img src="image/pic3.jpg" />
+								</a>
+							</div>
+							<div class="main">
+								<div class="newstitle">
+									<ul>
+										<li class="title">
+											<h3><a href="#">临海吉利汽车总装车间工位照明</a></h3>
+										</li>
+										<li class="date">
+											<span></span>
+											2018-06-01
+										</li>
+									</ul>
+								</div>
+								<div class="newslist">
+									<ul>
+										<li class="summary">
+											<h3></h3>
+											<p>由香港贸易发展局 （香港贸发局）主办的香港国际秋季灯饰展 （秋灯展）一直是传统照明与照明科技产业瞩目的盛事。展览踏入第18届，一连四天（10月27至30日）于香港......</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="pic">
+								<a href="#">
+									<img src="image/pic4.jpg" />
+								</a>
+							</div>
+							<div class="main">
+								<div class="newstitle">
+									<ul>
+										<li class="title">
+											<h3><a href="#">长城汽车天窗车间厂房照明</a></h3>
+										</li>
+										<li class="date">
+											<span></span>
+											2018-06-01
+										</li>
+									</ul>
+								</div>
+								<div class="newslist">
+									<ul>
+										<li class="summary">
+											<h3></h3>
+											<p>由香港贸易发展局 （香港贸发局）主办的香港国际秋季灯饰展 （秋灯展）一直是传统照明与照明科技产业瞩目的盛事。展览踏入第18届，一连四天（10月27至30日）于香港......</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<div class="pic">
+								<a href="#">
+									<img src="image/pic5.jpg" />
+								</a>
+							</div>
+							<div class="main">
+								<div class="newstitle">
+									<ul>
+										<li class="title">
+											<h3><a href="#">常州市武进常达轿车配件厂</a></h3>
+										</li>
+										<li class="date">
+											<span></span>
+											2018-06-01
+										</li>
+									</ul>
+								</div>
+								<div class="newslist">
+									<ul>
+										<li class="summary">
+											<h3></h3>
+											<p>由香港贸易发展局 （香港贸发局）主办的香港国际秋季灯饰展 （秋灯展）一直是传统照明与照明科技产业瞩目的盛事。展览踏入第18届，一连四天（10月27至30日）于香港......</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- 广告图1 -->
+<div style="width:100%;">
+	<img src="image/banner2.png" style="width:100%;height:400px;"/>
+</div>
+
+<!-- 內容2 关于我们 -->
+<div id="box_main2">
+	<div id="box_main2_title">
+		<div style="text-align:center">
+			<h1>关&nbsp;&nbsp;于&nbsp;&nbsp;我&nbsp;&nbsp;们</h1>
+		</div>
+	</div>
+	
+	<div id="box_main2_sub">
+		<!-- 企业介绍 -->
+		<div class="box_main2_sub_list float_left">
+			<div id="box_main2_sub_list_1" class="float_left">
+				<img src="image/company.jpg" />
+			</div>
+			<div id="box_main2_sub_list_2" class="float_right">
+				<p><span style="text-align:center;font-size:30px;width:100%;display:inline-block;color:#337ab7;">企业介绍</span></p>
+				<p><span style="font-size:16px;">华能灯具有限公司创建于1993年，注册资金11111万元，员工600多人，是一家自主创新的高新技术企业，是温州市照明行业的龙头企业......</span></p>
+				<a>更多>></a>
+			</div>
+		</div>
+		<!-- 工厂介绍 -->
+		<div class="box_main2_sub_list float_right">
+			<div id="box_main2_sub_list_1" class="float_left">
+				<img src="image/pic1.jpg" />
+			</div>
+			<div id="box_main2_sub_list_2" class="float_right">
+				<p><span style="text-align:center;font-size:30px;width:100%;display:inline-block;color:#337ab7;">工厂介绍</span></p>
+				<p><span style="font-size:16px;">生产基地拥有强大的制造能力，是国内先进的工程照明生产基地。由于主要的防爆产品均为隔爆型及本质安全型最高防爆等级产品，公司特......</span></p>
+				<a>更多>></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 广告图2 -->
+<div style="width:100%;">
+	<img src="image/banner3.png" style="width:100%;height:400px;"/>
+</div>
+
+<!-- 內容2  人才招聘 -->
+<div id="box_main3">
+	<div id="box_main3_title">
+		<div style="text-align:center">
+			<h1>人&nbsp;&nbsp;才&nbsp;&nbsp;招&nbsp;&nbsp;聘</h1>
+		</div>
+	</div>
+	
+	<!-- 左侧图 -->
+	<div id="box_main3_sub">
+		<div class="box_main3_sub_list float_left">
+			<img src="image/人才招聘.jpg"  />
+		</div>
+		<div class="box_main3_sub_list float_right">
+			<div class="box_main3_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">生产员工</span></p>
+				<p><span>针对工作经验不限的一线操作工</span><a style="color:#F29E20;position:absolute;" href="#">更多>> </a>	</p>
+			</div>
+			<div class="box_main3_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">有工作经验者</span></p>
+				<p><span>我们依靠经验，为有工作经验的雇员提供新的挑战，或提供重新。。。</span><a style="color:#F29E20;" href="#">更多>> </a></p>
+			</div>
+			<div class="box_main3_sub_menu">
+				<p><span style="font-size:25px;color:#F29E20;">职校生/大学生</span></p>
+				<p><span>职校生和大学生们随时能在公司找到有吸引力人的步入职场的机会——通过不同领域的实习，或者通过类似实习的方式在我们...</span><a style="color:#F29E20;" href="#">更多>> </a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div id="box_bottom">
+	<div id="box_bottom_sub">
+		<div id="box_bottom_sub_1">
+			<div style="width:100%;">
+				<p style="padding-bottom: 20px; font-size: 14px;">
+					<a><span style="color: #ffffff;">产品</span></a>
+					<span style="color: #ffffff;"> | </span>
+					<a><span style="color: #ffffff;">解决方案</span></a>
+					<span style="color: #ffffff;"> | </span>
+					<a><span style="color: #ffffff;">服务与培训</span></a>
+					<span style="color: #ffffff;"> | </span>
+					<a><span style="color: #ffffff;">合作伙伴</span></a>
+					<span style="color: #ffffff;"> | </span>
+					<a><span style="color: #ffffff;">关于我们</span></a>
+				</p>
+				<p><span style="color: #d3d3d3;">郭星宇 版权所有</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('#carousel').carousel({
+		 interval: 3000
+	})
+	
+	$("#box_top_sub_2 a").hover(function(){
+	    $(this).css("color","#fff");
+	},function(){
+	    $(this).css("color","#000");
+	});
+})
+</script>
+</html>

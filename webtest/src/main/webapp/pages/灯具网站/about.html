@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>企业介绍</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<style type="text/css">
+.clear{
+	height:150px;
+	width:100%;
+	float:left;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+A IMG {
+    padding-bottom: 0px;
+    border-right-width: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    vertical-align: middle;
+    border-left-width: 0px;
+    padding-top: 0px;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+/*导航栏*/
+#box_top {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    float: none;
+}
+#box_top_sub{
+	margin: 0px auto;
+    width: 1200px;
+    float: none;
+}
+#box_top_sub_1{
+	width: 400px;
+    float: left;
+}
+#box_top_sub_2{
+	border-bottom: #bababa 1px solid;
+    width: 750px;
+    float: left;
+    margin-left: 34px;
+    padding-top: 40px;
+}
+#box_top_sub_2 ul{
+	padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    font: bold 12px Verdana;
+    overflow: hidden;
+    padding-top: 0px;
+    float:left;
+}
+#box_top_sub_2 li{
+	position: relative;
+    padding-left: 2px;
+    white-space: nowrap;
+    float: left;
+}
+#box_top_sub_2 a{
+	padding-bottom: 0px;
+    line-height: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 微软雅黑;
+    float: left;
+    height: 35px;
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 0px;
+}
+#box_top_sub_2 li:hover{
+	color:#fff;
+	background-color:#80C9FF;
+}
+
+/*banner轮播图*/
+#box_bn{
+	position: relative;
+    width: 100%;
+    float: none;
+    top: 122px;
+}
+
+/*底部*/
+#box_bottom{
+	padding-bottom: 40px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    background: #2c2c2c;
+    float: left;
+    padding-top: 40px;
+}
+#box_bottom_sub{
+    margin: 0px auto;
+    width: 1180px;
+    float: none;
+}
+#box_bottom_sub_1{
+	width: 50%;
+    float: left;
+}
+.bottom_list_div{
+	width:48%;
+	display:inline-block;
+	text-align:left;
+	color:#fff;
+	font-size:14px;
+}
+
+/* 主体部分 */
+#box_content_sub{
+	margin: 0px auto;
+    width: 1180px;
+    height:800px;
+    float: none;
+}
+#box_content_title{
+	float:left;
+	width:100%;
+	text-align: left;
+}
+#box_content_left{
+	width:240px;
+	float:left;
+}
+#box_content_left ul{
+	width:100%;
+}
+#box_content_left li{
+	width:100%;
+	display:inline-block;
+	list-style:none;
+	text-align: center;
+	font-size:16px;
+	color:#000;
+}
+#box_content_right{
+	width:890px;
+	float:right;
+}
+.box_content_left_menu{
+	width:100%;
+    border-top: 1px solid;
+    padding: 10px;
+	text-align: center;
+}
+
+.box_content_left_menu span{
+	font-size: 22px;
+}
+.box_content_left_menu span:hover{
+	cursor: pointer;
+}
+#box_content_right_detail{
+	width:100%;
+	height:180px;
+}
+.right_tab{
+	display: inline-block;
+	height:60px;
+	line-height:60px;
+	font-size:22px;
+	text-align: left;
+}
+.right_tab span{
+	color:#fff;
+}
+.right_detail_list{
+	width: 100%;
+    border: 1px solid #B0C4DE;
+    padding: 0px 4%;
+    border-radius: 5px;
+    background-color: #B0C4DE;
+    margin-bottom:20px;
+}
+.position_list{
+	margin-top:10px;
+}
+
+.product_list{
+	display:inline-block;
+	width:350px;
+	height:400px;
+	vertical-align: top;
+	margin: 0 10px 10px 80px;
+}
+.product_list img{
+	width:100%;
+	height:300px;
+}
+.product_list p{
+	font-size:14px;
+	font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<!-- 头部 -->
+<div id="box_top">
+	<div id="box_top_sub">
+		<!-- logo -->
+		<div id="box_top_sub_1">
+			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+		</div>
+		<!-- 导航 -->
+		<div id="box_top_sub_2">
+			<ul>
+				<li><a href="index.html" id="index">首页</a></li>
+				<li><a href="product.html" id="product">产品</a></li>
+				<li><a href="about.html" style="color:#DF350B"  id="about">企业介绍</a></li>
+				<li><a href="telent.html" id="telent">人才招聘</a></li>
+				<li><a href="customer.html" id="customer">客户案例</a></li>
+				<li><a href="call.html" id="call">联系我们</a></li>
+			</ul>
+		</div>
+		<div id="box_top_sub_3"></div>
+	</div>
+</div>
+
+<!-- 轮播图banner -->
+<div id="box_bn">
+	<div style="width:100%;">
+		 <img src="image/主图1.jpg" alt="First slide" 
+		            style="width:100%;height:500px"/>
+	</div>
+</div>
+
+<div class="clear" style="margin-top:60px;"></div>
+
+<div id="box_content">
+	<div id="box_content_sub">
+	
+		<div id="box_content_left">
+			<div class="box_content_left_menu">
+				<span style="color:#DF350B" id="menu_span1">我们的客户>></span>
+			</div>
+			<div class="box_content_left_menu">
+				<span id="menu_span2">我们的产品 >></span>
+			</div>
+			<div class="box_content_left_menu">
+				<span id="menu_span3">我们的营销中心>></span>
+			</div>
+			<div class="box_content_left_menu">
+				<span id="menu_span4">我们生产基地 >></span>
+			</div>
+		</div>
+		<div id="box_content_right">
+			<div style="width:100%;">
+				<div class="product_list">
+					<img src="image/产品图.jpg"/>
+					<p>公司主要生产移动防爆照明、移动专业照明和固定防</p>
+					<p>爆照明、固定专业照明、商业照明五大系列为主的数</p>
+					<p>百种照明产品。<a href="#">更多>></a></p>
+				</div>
+				<div class="product_list">
+					<img src="image/客户图.jpg"/>
+					<p>我们的产品主要适用于电力、铁路、地铁、公安、消</p>
+					<p>防、部队、石油石化、冶金、煤矿、船舶、航空、场</p>
+					<p>馆、水利防汛、事故抢险等行业已作为工作照明和</p>
+						
+					<p>服务，得到了广大客户的认同和赞赏。<a href="#">更多>></a></p>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+
+<div id="box_bottom">
+	<div id="box_bottom_sub">
+		<div id="box_bottom_sub_1">
+			<div style="width:100%;">
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">传真：0577-88005868</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">邮箱：325088</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">http://www.zhenghui.com</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="box_bottom_sub_1">
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">&nbsp;</span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+			</div>
+			<div class="bottom_list_div">
+				<span style="color: #ffffff;">郭星宇</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+var chooseMenu = "menu_span1";
+$(function(){
+	$('#carousel').carousel({
+		 interval: 3000
+	})
+	
+	$("#box_top_sub_2 a").hover(function(){
+	    $(this).css("color","#fff");
+	},function(){
+		var id = $(this).attr("id");
+		if(id=='about'){
+			$(this).css("color","#DF350B");
+		}else{
+	   	 	$(this).css("color","#000");
+		}
+	});
+	
+	$(".box_content_left_menu").on("click","span",function(){
+		var id = $(this).attr("id");
+		chooseMenu = id;
+		$(".box_content_left_menu").find("span").css("color","#000");
+		$(this).css("color","#DF350B");
+		
+		/* if(id=="menu_span2"){
+			$("#box_content_right_detail").hide();
+		}else{
+			$("#box_content_right_detail").show();
+		} */
+	})
+	
+	//左侧菜单悬停颜色
+	$(".box_content_left_menu span").hover(function(){
+	    $(this).css("color","#80C9FF");
+	},function(){
+		var id = $(this).attr("id");
+		if(id==chooseMenu ){
+			$(this).css("color","#DF350B");
+		}else{
+	   	 	$(this).css("color","#000");
+		}
+	});
+	
+})
+</script>
+</html>
