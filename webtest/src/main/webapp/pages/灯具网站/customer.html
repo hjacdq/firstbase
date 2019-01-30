@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>客户案例</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" /> -->
+<link rel="stylesheet" href="rwd-flex/flexslider.css" type="text/css" />
 <style type="text/css">
+#guoxingyu{
+	width:1200px;
+	margin:0 auto;
+}
 .clear{
 	height:150px;
 	width:100%;
@@ -49,7 +54,7 @@ A IMG {
 #box_top {
     z-index: 999;
     position: absolute;
-    width: 100%;
+    width: 1180px;
     float: none;
 }
 #box_top_sub{
@@ -139,137 +144,253 @@ A IMG {
 	color:#fff;
 	font-size:14px;
 }
+
+/* 主体部分 */
+#box_main_title{
+	text-align: center;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width: 660px;
+    float: none;
+    padding-top: 100px;
+}
+#box_content_sub{
+	margin: 0px auto;
+    width: 1180px;
+    height:800px;
+    float: none;
+}
+#box_content_title{
+	float:left;
+	width:100%;
+	text-align: left;
+}
+#box_content_left{
+	width:240px;
+	float:left;
+}
+#box_content_left ul{
+	width:100%;
+}
+#box_content_left li{
+	width:100%;
+	display:inline-block;
+	list-style:none;
+	text-align: center;
+	font-size:16px;
+	color:#000;
+}
+#box_content_right{
+	width:890px;
+	float:right;
+}
+.box_content_left_menu{
+	width:100%;
+    border-top: 1px solid;
+    padding: 10px;
+	text-align: center;
+}
+.box_content_left_menu span{
+	font-size: 22px;
+}
+.box_content_left_menu span:hover{
+	cursor: pointer;
+}
+
+#box_content_right_sub{
+	width: 70%;
+    margin: 0px 15%;
+}
+#img_div{
+	width:100%;
+}
+#img_div img{
+	width:550px;
+	height:320px;
+}
+.right_list{
+	width:100%;
+	height:34px;
+	line-height:34px;
+	text-align: left;
+    font-size: 15px;
+    margin: 10px 0px;
+}
+.right_list:hover{
+	cursor:pointer;
+}
+.left_span{
+	display: inline-block;
+	min-width:35px;
+}
+
 </style>
 </head>
 <body>
-
-<!-- 头部 -->
-<div id="box_top">
-	<div id="box_top_sub">
-		<!-- logo -->
-		<div id="box_top_sub_1">
-			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+<div id="guoxingyu">
+	<!-- 头部 -->
+	<div id="box_top">
+		<div id="box_top_sub">
+			<!-- logo -->
+			<div id="box_top_sub_1">
+				<img src="image/logo.jpg" style="width:400px;height:85px;" />
+			</div>
+			<!-- 导航 -->
+			<div id="box_top_sub_2">
+				<ul>
+					<li><a href="index.html" id="index">首页</a></li>
+					<li><a href="product.html" id="product">产品</a></li>
+					<li><a href="about.html" id="about">企业介绍</a></li>
+					<li><a href="telent.html" id="telent">人才招聘</a></li>
+					<li><a href="customer.html" style="color:#DF350B"  id="customer">客户案例</a></li>
+					<li><a href="call.html" id="call">联系我们</a></li>
+				</ul>
+			</div>
+			<div id="box_top_sub_3"></div>
 		</div>
-		<!-- 导航 -->
-		<div id="box_top_sub_2">
-			<ul>
-				<li><a href="index.html" id="index">首页</a></li>
-				<li><a href="product.html" id="product">产品</a></li>
-				<li><a href="about.html" id="about">企业介绍</a></li>
-				<li><a href="telent.html" id="telent">人才招聘</a></li>
-				<li><a href="customer.html" style="color:#DF350B"  id="customer">客户案例</a></li>
-				<li><a href="call.html" id="call">联系我们</a></li>
-			</ul>
+	</div>
+	
+	<!-- 轮播图banner -->
+	<div id="box_bn">
+		<div style="width:100%;">
+			 <img src="image/客户案例主图.jpg" alt="First slide" 
+			            style="width:100%;height:500px"/>
 		</div>
-		<div id="box_top_sub_3"></div>
 	</div>
-</div>
-
-<!-- 轮播图banner -->
-<div id="box_bn">
-	<div id="carousel" class="carousel slide">
-	    <ol class="carousel-indicators">
-	        <li data-target="#carousel" data-ride="carousel" data-slide-to="0" class="active"></li>
-	        <li data-target="#carousel" data-ride="carousel" data-slide-to="1"></li>
-	        <li data-target="#carousel" data-ride="carousel" data-slide-to="2"></li>
-	    </ol>   
-	    <div class="carousel-inner">
-	        <div class="item active">
-	        	<a>
-		            <img src="image/主图1.jpg" alt="First slide" 
-		            style="width:100%;height:500px"/>
-	            </a>
-	            <div class="carousel-caption">
-	            	<h3>专业解决方案</h3>
-	            	<p>LIGHTING SOLUTION EXPERT</p>
-	            </div>
-	        </div>
-	        <div class="item">
-	        	<a>
-		            <img src="image/主图2.jpg" alt="Second slide"
-		            style="width:100%;height:500px"/>
-	            </a>
-	            <div class="carousel-caption">
-	            	<h3>专业解决方案</h3>
-	            	<p>LIGHTING SOLUTION EXPERT</p>
-	            </div>
-	        </div>
-	        <div class="item">
-	        	<a>
-		            <img src="image/主图3.jpg" alt="Third slide"
-		            style="width:100%;height:500px"/>
-	            </a>
-	            <div class="carousel-caption">
-	            	<h3>新时代</h3>
-	            	<p>Enjoy Light Enjoy Life</p>
-	            </div>
-	        </div>
-	    </div>
-		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-	                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	                 <span class="sr-only">Previous</span>
-	             </a>
-	             <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-	                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	                 <span class="sr-only">Next</span>
-	             </a>
-	</div>
-</div>
-
-<div class="clear"></div>
-
-
-<div id="box_bottom">
-	<div id="box_bottom_sub">
-		<div id="box_bottom_sub_1">
-			<div style="width:100%;">
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">传真：0577-88005868</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">邮箱：325088</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">http://www.zhenghui.com</span>
-				</div>
+	
+	<div class="clear" style="margin-top:60px;"></div>
+	
+	<div id="box_content">
+		<div id="box_main_title">
+			<div style="text-align:center">
+				<span style="color:#000;font-size:30px;">客&nbsp;&nbsp;户</span>
+				<span style="color:#32CD32;font-size:30px;">&nbsp;&nbsp;案&nbsp;&nbsp;例</span>
+			</div>
+			<div style="text-align:center">
+				<span style="color:#000;font-size:16px;">CUSTOMER&nbsp;&nbsp;CASE</span>
 			</div>
 		</div>
+		<div id="box_content_sub">
 		
-		<div id="box_bottom_sub_1">
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">&nbsp;</span>
+			<div id="box_content_left">
+				<div class="box_content_left_menu">
+					<span style="color:#DF350B" id="menu_span1">项目名称>></span>
+				</div>
+				<div class="box_content_left_menu">
+					<span id="menu_span2">项目介绍 >></span>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">&nbsp;</span>
+			<div id="box_content_right">
+				<div id="box_content_right_sub">
+					<div id="img_div">
+						<img src="image/客户案例子栏目.jpg"/>
+					</div>
+					
+					<div style="width:100%;">
+						<div class="right_list">
+							<span class="left_span">1</span>
+							<span class="right_span">上海大众汽车二厂总装车间工位改造项目</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">2</span>
+							<span class="right_span">上海大众汽车二厂涂装车间工位改造项目</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">3</span>
+							<span class="right_span">上海大众汽车三厂总装车间工位照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">4</span>
+							<span class="right_span">上海大众汽车三厂新涂装车间工位照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">5</span>
+							<span class="right_span">上海大众汽车南京四厂总装车间厂房照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span"></span>
+							<span class="right_span">上海大众汽车南京四厂总装车间工位照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">6</span>
+							<span class="right_span">上海大众汽车南京四厂涂装车间厂房照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span"></span>
+							<span class="right_span">上海大众汽车南京四厂涂装车间工位照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">7</span>
+							<span class="right_span">上海大众汽车南京四厂焊装车间工位照明</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span">8</span>
+							<span class="right_span">上海大众汽车南京四厂技术中心、Audit、样板车间、阳光通道等</span>
+						</div>
+						<div class="right_list">
+							<span class="left_span"></span>
+							<span class="right_span"><a href="#">更多>></a></span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+		
+		</div>
+	</div>
+	<div class="clear" ></div>
+	
+	
+	<div id="box_bottom">
+		<div id="box_bottom_sub">
+			<div id="box_bottom_sub_1">
+				<div style="width:100%;">
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">传真：0577-88005868</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">邮箱：325088</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">http://www.zhenghui.com</span>
+					</div>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">郭星宇</span>
+			
+			<div id="box_bottom_sub_1">
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">&nbsp;</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">&nbsp;</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">郭星宇</span>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 </body>
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="rwd-flex/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="rwd-flex/jquery.flexslider-min.js"></script>
 <script>
 $(function(){
-	$('#carousel').carousel({
+	/* $('#carousel').carousel({
 		 interval: 3000
-	})
-	
+	}) */
+	//导航悬停颜色
 	$("#box_top_sub_2 a").hover(function(){
 	    $(this).css("color","#fff");
 	},function(){
@@ -281,7 +402,28 @@ $(function(){
 		}
 	});
 	
-	$("#customer_menu_div p").hover(function(){
+	$(".box_content_left_menu").on("click","span",function(){
+		var id = $(this).attr("id");
+		chooseMenu = id;
+		$(".box_content_left_menu").find("span").css("color","#000");
+		$(this).css("color","#DF350B");
+		
+	})
+	
+	//左侧菜单悬停颜色
+	$(".box_content_left_menu span").hover(function(){
+	    $(this).css("color","#80C9FF");
+	},function(){
+		var id = $(this).attr("id");
+		if(id==chooseMenu ){
+			$(this).css("color","#DF350B");
+		}else{
+	   	 	$(this).css("color","#000");
+		}
+	});
+	
+	//客户案例悬停颜色
+	$(".right_list").hover(function(){
 	    $(this).find("span").css("color","#80C9FF");
 	},function(){
 	    $(this).find("span").css("color","#000");

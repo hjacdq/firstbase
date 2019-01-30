@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>企业介绍</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="rwd-flex/flexslider.css" type="text/css" />
 <style type="text/css">
+#guoxingyu{
+	width:1200px;
+	margin:0 auto;
+}
 .clear{
 	height:150px;
 	width:100%;
@@ -49,7 +53,7 @@ A IMG {
 #box_top {
     z-index: 999;
     position: absolute;
-    width: 100%;
+    width: 1180px;
     float: none;
 }
 #box_top_sub{
@@ -141,6 +145,14 @@ A IMG {
 }
 
 /* 主体部分 */
+#box_main_title{
+	text-align: center;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width: 660px;
+    float: none;
+    padding-top: 100px;
+}
 #box_content_sub{
 	margin: 0px auto;
     width: 1180px;
@@ -184,31 +196,6 @@ A IMG {
 .box_content_left_menu span:hover{
 	cursor: pointer;
 }
-#box_content_right_detail{
-	width:100%;
-	height:180px;
-}
-.right_tab{
-	display: inline-block;
-	height:60px;
-	line-height:60px;
-	font-size:22px;
-	text-align: left;
-}
-.right_tab span{
-	color:#fff;
-}
-.right_detail_list{
-	width: 100%;
-    border: 1px solid #B0C4DE;
-    padding: 0px 4%;
-    border-radius: 5px;
-    background-color: #B0C4DE;
-    margin-bottom:20px;
-}
-.position_list{
-	margin-top:10px;
-}
 
 .product_list{
 	display:inline-block;
@@ -229,143 +216,152 @@ A IMG {
 </style>
 </head>
 <body>
-
-<!-- 头部 -->
-<div id="box_top">
-	<div id="box_top_sub">
-		<!-- logo -->
-		<div id="box_top_sub_1">
-			<img src="image/logo.jpg" style="width:400px;height:85px;" />
+<div id="guoxingyu">
+	<!-- 头部 -->
+	<div id="box_top">
+		<div id="box_top_sub">
+			<!-- logo -->
+			<div id="box_top_sub_1">
+				<img src="image/logo.jpg" style="width:400px;height:85px;" />
+			</div>
+			<!-- 导航 -->
+			<div id="box_top_sub_2">
+				<ul>
+					<li><a href="index.html" id="index">首页</a></li>
+					<li><a href="product.html" id="product">产品</a></li>
+					<li><a href="about.html" style="color:#DF350B"  id="about">企业介绍</a></li>
+					<li><a href="telent.html" id="telent">人才招聘</a></li>
+					<li><a href="customer.html" id="customer">客户案例</a></li>
+					<li><a href="call.html" id="call">联系我们</a></li>
+				</ul>
+			</div>
+			<div id="box_top_sub_3"></div>
 		</div>
-		<!-- 导航 -->
-		<div id="box_top_sub_2">
-			<ul>
-				<li><a href="index.html" id="index">首页</a></li>
-				<li><a href="product.html" id="product">产品</a></li>
-				<li><a href="about.html" style="color:#DF350B"  id="about">企业介绍</a></li>
-				<li><a href="telent.html" id="telent">人才招聘</a></li>
-				<li><a href="customer.html" id="customer">客户案例</a></li>
-				<li><a href="call.html" id="call">联系我们</a></li>
-			</ul>
-		</div>
-		<div id="box_top_sub_3"></div>
 	</div>
-</div>
-
-<!-- 轮播图banner -->
-<div id="box_bn">
-	<div style="width:100%;">
-		 <img src="image/主图1.jpg" alt="First slide" 
-		            style="width:100%;height:500px"/>
-	</div>
-</div>
-
-<div class="clear" style="margin-top:60px;"></div>
-
-<div id="box_content">
-	<div id="box_content_sub">
 	
-		<div id="box_content_left">
-			<div class="box_content_left_menu">
-				<span style="color:#DF350B" id="menu_span1">我们的客户>></span>
-			</div>
-			<div class="box_content_left_menu">
-				<span id="menu_span2">我们的产品 >></span>
-			</div>
-			<div class="box_content_left_menu">
-				<span id="menu_span3">我们的营销中心>></span>
-			</div>
-			<div class="box_content_left_menu">
-				<span id="menu_span4">我们生产基地 >></span>
-			</div>
+	<!-- 轮播图banner -->
+	<div id="box_bn">
+		<div style="width:100%;">
+			 <img src="image/企业介绍主图.jpg" alt="First slide" 
+			            style="width:100%;height:500px"/>
 		</div>
-		<div id="box_content_right">
-			<div style="width:100%;">
-				<div class="product_list">
-					<img src="image/产品图.jpg"/>
-					<p>公司主要生产移动防爆照明、移动专业照明和固定防</p>
-					<p>爆照明、固定专业照明、商业照明五大系列为主的数</p>
-					<p>百种照明产品。<a href="#">更多>></a></p>
-				</div>
-				<div class="product_list">
-					<img src="image/客户图.jpg"/>
-					<p>我们的产品主要适用于电力、铁路、地铁、公安、消</p>
-					<p>防、部队、石油石化、冶金、煤矿、船舶、航空、场</p>
-					<p>馆、水利防汛、事故抢险等行业已作为工作照明和</p>
-					<p>服务，得到了广大客户的认同和赞赏。<a href="#">更多>></a></p>
-				</div>
-				<div class="product_list">
-					<img src="image/营销中心图.jpg"/>
-					<p>公司营销中心所在温州财富中心，地处温州市新核</p>
-					<p>心商圈，是温州目前最好的顶级国际化5A商务大楼</p>
-					<p>，是商流、物流、人才流、信息流等经济要素流动的</p>
-					<p>汇集点。<a href="#">更多>></a></p>
-				</div>
-				<div class="product_list">
-					<img src="image/工厂图.jpg"/>
-					<p>生产基地拥有强大的制造能力，是国内先进的工程</p>
-					<p>照明生产基地。由于主要的防爆产品均为隔爆型</p>
-					<p>及本质安全型最高防爆等级产品，公司特配置了</p>
-					<p>光谱分析仪、分布光度计、高精度影像测量......<a href="#">更多>></a></p>
-				</div>
-			</div>
-		</div>
-	
 	</div>
-</div>
-<div class="clear" ></div>
-
-<div id="box_bottom">
-	<div id="box_bottom_sub">
-		<div id="box_bottom_sub_1">
-			<div style="width:100%;">
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">传真：0577-88005868</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">邮箱：325088</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
-				</div>
-				<div class="bottom_list_div">
-					<span style="color: #ffffff;">http://www.zhenghui.com</span>
-				</div>
+	
+	<div class="clear" style="margin-top:60px;"></div>
+	
+	<div id="box_content">
+		<div id="box_main_title">
+			<div style="text-align:center">
+				<span style="color:#000;font-size:30px;">关&nbsp;&nbsp;于</span>
+				<span style="color:#337ab7;font-size:30px;">&nbsp;&nbsp;我&nbsp;&nbsp;们</span>
+			</div>
+			<div style="text-align:center">
+				<span style="color:#000;font-size:16px;">ABOUT&nbsp;&nbsp;US</span>
 			</div>
 		</div>
+		<div id="box_content_sub">
 		
-		<div id="box_bottom_sub_1">
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">&nbsp;</span>
+			<div id="box_content_left">
+				<div class="box_content_left_menu">
+					<span style="color:#DF350B" id="menu_span1">我们的客户>></span>
+				</div>
+				<div class="box_content_left_menu">
+					<span id="menu_span2">我们的产品 >></span>
+				</div>
+				<div class="box_content_left_menu">
+					<span id="menu_span3">我们的营销中心>></span>
+				</div>
+				<div class="box_content_left_menu">
+					<span id="menu_span4">我们生产基地 >></span>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">&nbsp;</span>
+			<div id="box_content_right">
+				<div style="width:100%;">
+					<div class="product_list">
+						<img src="image/产品图.jpg"/>
+						<p>公司主要生产移动防爆照明、移动专业照明和固定防</p>
+						<p>爆照明、固定专业照明、商业照明五大系列为主的数</p>
+						<p>百种照明产品。<a href="#">更多>></a></p>
+					</div>
+					<div class="product_list">
+						<img src="image/客户图.jpg"/>
+						<p>我们的产品主要适用于电力、铁路、地铁、公安、消</p>
+						<p>防、部队、石油石化、冶金、煤矿、船舶、航空、场</p>
+						<p>馆、水利防汛、事故抢险等行业已作为工作照明和</p>
+						<p>服务，得到了广大客户的认同和赞赏。<a href="#">更多>></a></p>
+					</div>
+					<div class="product_list">
+						<img src="image/营销中心图.jpg"/>
+						<p>公司营销中心所在温州财富中心，地处温州市新核</p>
+						<p>心商圈，是温州目前最好的顶级国际化5A商务大楼</p>
+						<p>，是商流、物流、人才流、信息流等经济要素流动的</p>
+						<p>汇集点。<a href="#">更多>></a></p>
+					</div>
+					<div class="product_list">
+						<img src="image/工厂图.jpg"/>
+						<p>生产基地拥有强大的制造能力，是国内先进的工程</p>
+						<p>照明生产基地。由于主要的防爆产品均为隔爆型</p>
+						<p>及本质安全型最高防爆等级产品，公司特配置了</p>
+						<p>光谱分析仪、分布光度计、高精度影像测量......<a href="#">更多>></a></p>
+					</div>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+		
+		</div>
+	</div>
+	<div class="clear" ></div>
+	
+	<div id="box_bottom">
+		<div id="box_bottom_sub">
+			<div id="box_bottom_sub_1">
+				<div style="width:100%;">
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">地址：温州市车站大道财富中心10楼</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">传真：0577-88005868</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">邮箱：325088</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">联系邮箱：chhi@zhenghui.com</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">电话：0577-88005601 88005602</span>
+					</div>
+					<div class="bottom_list_div">
+						<span style="color: #ffffff;">http://www.zhenghui.com</span>
+					</div>
+				</div>
 			</div>
-			<div class="bottom_list_div">
-				<span style="color: #ffffff;">郭星宇</span>
+			
+			<div id="box_bottom_sub_1">
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">&nbsp;</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">&nbsp;</span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">@  华能灯具有限公司版权所有  1620310010  </span>
+				</div>
+				<div class="bottom_list_div">
+					<span style="color: #ffffff;">郭星宇</span>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 </body>
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="rwd-flex/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="rwd-flex/jquery.flexslider-min.js"></script>
 <script>
 var chooseMenu = "menu_span1";
 $(function(){
-	$('#carousel').carousel({
+	/* $('#carousel').carousel({
 		 interval: 3000
-	})
+	}) */
 	
 	$("#box_top_sub_2 a").hover(function(){
 	    $(this).css("color","#fff");
@@ -384,11 +380,6 @@ $(function(){
 		$(".box_content_left_menu").find("span").css("color","#000");
 		$(this).css("color","#DF350B");
 		
-		/* if(id=="menu_span2"){
-			$("#box_content_right_detail").hide();
-		}else{
-			$("#box_content_right_detail").show();
-		} */
 	})
 	
 	//左侧菜单悬停颜色
